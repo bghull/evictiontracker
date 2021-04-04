@@ -4,9 +4,9 @@ set OUTPUT=%2
 
 echo USAGE: parse [inputfile [outputfile]]
 
-if "%INPUT%" == "" (
+if NOT "%INPUT%" == "" (
     echo reading from %INPUT%
-    if "%OUTPUT%" == "" (
+    if NOT "%OUTPUT%" == "" (
         echo writing csv to %OUTPUT%
         java -jar parser.jar EvictionsTrackerApplication < "%INPUT%" > "%OUTPUT%"
         exit

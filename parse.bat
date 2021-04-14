@@ -1,6 +1,6 @@
 @echo off
-set INPUT=%1
-set OUTPUT=%2
+set INPUT=%~f1
+set OUTPUT=%~f2
 
 echo USAGE: parse [inputfile [outputfile]]
 

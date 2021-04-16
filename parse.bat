@@ -12,8 +12,8 @@ if NOT "%INPUT%" == "" (
         exit
     )
 
-    echo writing csv to stdout
-    java -jar parser.jar EvictionsTrackerApplication < "%INPUT%"
+    echo writing csv to out.csv
+    java -jar parser.jar EvictionsTrackerApplication < "%INPUT%" > out.csv
     exit
 )
 

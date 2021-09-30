@@ -129,7 +129,7 @@ public class PdfCaseParserImpl implements PdfCaseParser {
         return lines
                 .stream()
                 .map(line -> Pattern
-                        .compile(".*(ATTY)?.*(FIRST|SECOND).+(\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}).*")
+                        .compile(".*(ATTY)?.*FIRST.+(\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}).*")
                         .matcher(line))
                 .filter(Matcher::matches)
                 .map(matcher -> EventDto
